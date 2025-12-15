@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto web responsive con HTML semántico y CSS moderno">
+    <title>Proyecto Web Moderno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Encabezado principal del sitio -->
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo">Mi Sitio Web</h1>
+
+        <!-- Navegación principal -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="main-content">
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <h2 class="hero-title">Bienvenido a Nuestro Sitio</h2>
+            <p class="hero-text">Creamos experiencias digitales únicas y memorables</p>
+            <a href="#servicios" class="btn btn-primary">Conocer Más</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+
+            <div class="services-grid">
+                <article class="card">
+                    <h3 class="card-title">Diseño Web</h3>
+                    <p class="card-text">Creamos interfaces atractivas y funcionales que conectan con tu audiencia.</p>
+                    <a href="#" class="card-link">Ver más →</a>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Desarrollo</h3>
+                    <p class="card-text">Desarrollamos soluciones web robustas y escalables con las últimas tecnologías.</p>
+                    <a href="#" class="card-link">Ver más →</a>
+                </article>
+
+                <article class="card">
+                    <h3 class="card-title">Consultoría</h3>
+                    <p class="card-text">Asesoramos tu estrategia digital para maximizar resultados y ROI.</p>
+                    <a href="#" class="card-link">Ver más →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portfolio -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+
+            <div class="portfolio-grid">
+                <article class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Proyecto Alpha</h3>
+                        <p>Rediseño completo de plataforma e-commerce</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Proyecto Beta</h3>
+                        <p>Aplicación web para gestión empresarial</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Proyecto Gamma</h3>
+                        <p>Portal corporativo con CMS personalizado</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Proyecto Delta</h3>
+                        <p>Sistema de reservas online</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección FAQ con acordeón -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+
+            <details class="accordion-item">
+                <summary class="accordion-header">¿Cuánto tiempo toma un proyecto?</summary>
+                <p class="accordion-content">El tiempo varía según la complejidad, pero proyectos típicos toman entre 4-8 semanas desde la planificación hasta el lanzamiento.</p>
+            </details>
+
+            <details class="accordion-item">
+                <summary class="accordion-header">¿Ofrecen soporte post-lanzamiento?</summary>
+                <p class="accordion-content">Sí, ofrecemos planes de mantenimiento y soporte técnico continuo para garantizar el óptimo funcionamiento de tu sitio.</p>
+            </details>
+
+            <details class="accordion-item">
+                <summary class="accordion-header">¿Trabajan con clientes internacionales?</summary>
+                <p class="accordion-content">Absolutamente, trabajamos con clientes en todo el mundo adaptándonos a diferentes zonas horarias y necesidades.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contacta con Nosotros</h2>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <address class="address-info">
+                        <p><strong>Email:</strong> info@ejemplo.com</p>
+                        <p><strong>Teléfono:</strong> +34 123 456 789</p>
+                        <p><strong>Ubicación:</strong> Madrid, España</p>
+                    </address>
+                </div>
+
+                <div class="contact-cta">
+                    <h3>¿Listo para empezar?</h3>
+                    <p>Transformemos tu visión en realidad digital</p>
+                    <a href="mailto:info@ejemplo.com" class="btn btn-secondary">Enviar Mensaje</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Pie de página -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Expertos en crear experiencias web excepcionales desde 2020.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <ul class="social-links">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

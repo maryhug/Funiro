@@ -1,0 +1,712 @@
+/* ==========================================
+   VARIABLES CSS - SISTEMA DE DISEÑO
+   ========================================== */
+:root {
+    /* Colores principales */
+    --color-primary: #2563eb;
+    --color-primary-dark: #1e40af;
+    --color-secondary: #7c3aed;
+    --color-secondary-dark: #5b21b6;
+
+    /* Colores de fondo */
+    --color-bg-light: #f8fafc;
+    --color-bg-white: #ffffff;
+    --color-bg-dark: #1e293b;
+
+    /* Colores de texto */
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #475569;
+    --color-text-light: #cbd5e1;
+
+    /* Colores de acento */
+    --color-accent: #f59e0b;
+    --color-success: #10b981;
+    --color-border: #e2e8f0;
+
+    /* Tipografía */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    /* Pesos tipográficos */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Espaciados */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+
+    /* Bordes */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    /* Transiciones */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+}
+
+/* ==========================================
+   RESET Y ESTILOS BASE
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-white);
+}
+
+/* ==========================================
+   UTILIDADES
+   ========================================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* ==========================================
+   COMPONENTES REUTILIZABLES - BOTONES
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-bg-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   COMPONENTES - ENLACES
+   ========================================== */
+a {
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-sm);
+}
+
+/* ==========================================
+   COMPONENTES - TARJETAS
+   ========================================== */
+.card {
+    background-color: var(--color-bg-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid var(--color-border);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.card-text {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+
+.card-link {
+    display: inline-block;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.card-link:hover {
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   HEADER - ENCABEZADO DEL SITIO
+   ========================================== */
+.site-header {
+    background-color: var(--color-bg-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--spacing-lg) 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.logo {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* ==========================================
+   NAVEGACIÓN PRINCIPAL
+   ========================================== */
+.main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width var(--transition-base);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    background-color: var(--color-bg-light);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.nav-link:active {
+    background-color: var(--color-border);
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+.main-content {
+    min-height: calc(100vh - 200px);
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-bg-white);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-text {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
+    opacity: 0.95;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Microinteracción - Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   SECCIÓN DE SERVICIOS
+   ========================================== */
+.services-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg-light);
+}
+
+.section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-text-primary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+/* ==========================================
+   SECCIÓN PORTFOLIO
+   ========================================== */
+.portfolio-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg-white);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.portfolio-item {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-2xl);
+    min-height: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all var(--transition-base);
+}
+
+.portfolio-item:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-xl);
+}
+
+.portfolio-content {
+    position: relative;
+    z-index: 1;
+    color: var(--color-bg-white);
+}
+
+.portfolio-content h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.portfolio-content p {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+}
+
+/* ==========================================
+   FAQ - ACORDEÓN (HTML/CSS PURO)
+   ========================================== */
+.faq-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg-light);
+}
+
+.accordion-item {
+    background-color: var(--color-bg-white);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.accordion-header {
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all var(--transition-fast);
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+}
+
+details[open] .accordion-header::after {
+    transform: rotate(45deg);
+}
+
+.accordion-header:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+}
+
+.accordion-header:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+}
+
+.accordion-content {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    animation: slideDown var(--transition-base);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   SECCIÓN DE CONTACTO
+   ========================================== */
+.contact-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg-white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.contact-info,
+.contact-cta {
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius-lg);
+}
+
+.contact-info h3,
+.contact-cta h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-primary);
+}
+
+.address-info {
+    font-style: normal;
+}
+
+.address-info p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-secondary);
+}
+
+.contact-cta p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.site-footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.footer-section h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-bg-white);
+}
+
+.footer-section p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.footer-links,
+.social-links {
+    list-style: none;
+}
+
+.footer-links li,
+.social-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a,
+.social-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO - TABLET
+   ========================================== */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO - MÓVIL
+   ========================================== */
+@media (max-width: 480px) {
+    :root {
+        --font-size-3xl: 1.5rem;
+        --font-size-2xl: 1.25rem;
+        --spacing-3xl: 2rem;
+    }
+
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .hero-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .services-section,
+    .portfolio-section,
+    .faq-section,
+    .contact-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-list {
+        gap: 0;
+    }
+
+    .card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO - ESCRITORIO GRANDE
+   ========================================== */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
