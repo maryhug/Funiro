@@ -1,711 +1,843 @@
-/* Reset y estilos base */
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+
+/* Reset universal - Elimina estilos predeterminados del navegador */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimina márgenes externos */
+    padding: 0; /* Elimina relleno interno */
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto total del elemento */
 }
 
+/* Estilos del body - Contenedor principal de la página */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Poppins', Arial, sans-serif; /* Fuente principal con fallbacks (alternativas) */
+    color: #333; /* Color de texto gris oscuro */
+    line-height: 1.6; /* Altura de línea para espaciado vertical del texto */
 }
 
+/* Estilos para todos los enlaces */
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Elimina subrayado de enlaces */
+    color: inherit; /* Hereda el color del elemento padre */
 }
 
+/* Estilos para todas las listas */
 ul {
-    list-style: none;
+    list-style: none; /* Elimina viñetas de las listas */
 }
 
+/* Estilos para todos los botones */
 button {
-    cursor: pointer;
-    border: none;
-    font-family: inherit;
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    border: none; /* Elimina borde predeterminado */
+    font-family: inherit; /* Hereda la fuente del elemento padre */
 }
 
+/* Estilos para todas las imágenes */
 img {
-    max-width: 100%;
-    display: block;
+    max-width: 100%; /* Ancho máximo del 100% del contenedor (evita desbordamiento) */
+    display: block; /* Cambia display a bloque (elimina espacio inferior) */
 }
 
-/* Header */
+/* ========================================
+   HEADER - CABECERA
+   ======================================== */
+
+/* Contenedor principal del header */
 .header {
-    background: #fff;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: #fff; /* Fondo blanco */
+    padding: 1.5rem 2rem; /* Relleno: 1.5rem arriba/abajo, 2rem laterales */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil: horizontal, vertical, difuminado, color */
 }
 
+/* Contenedor interno del header con ancho máximo */
 .container-header {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1440px; /* Ancho máximo de 1440px */
+    margin: 0 auto; /* Centra horizontalmente (0 arriba/abajo, auto laterales) */
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Distribuye elementos con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
+/* Primer div hijo del container-header (logo y título) */
 .container-header > div:first-child {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    gap: 0.5rem; /* Espacio de 0.5rem entre elementos flex */
 }
 
+/* Título h1 dentro del header */
 .container-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000;
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem (24px aprox) */
+    font-weight: 700; /* Grosor de fuente bold (negrita) */
+    color: #000; /* Color negro */
 }
 
-/* Navegación */
+/* ========================================
+   NAVEGACIÓN
+   ======================================== */
+
+/* Navegación principal */
 .main-nav {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    gap: 4rem; /* Espacio grande de 4rem entre elementos */
 }
 
+/* Lista de navegación */
 .nav-list {
-    display: flex;
-    gap: 2.5rem;
-    font-weight: 500;
+    display: flex; /* Activa flexbox */
+    gap: 2.5rem; /* Espacio de 2.5rem entre enlaces */
+    font-weight: 500; /* Grosor de fuente medium */
 }
 
+/* Enlaces de la lista de navegación */
 .nav-list a {
-    transition: color 0.3s;
+    transition: color 0.3s; /* Transición suave del color en 0.3 segundos */
 }
 
+/* Enlaces al pasar el mouse */
 .nav-list a:hover {
-    color: #B88E2F;
+    color: #B88E2F; /* Cambia a color dorado */
 }
 
+/* Contenedor de íconos de navegación */
 .nav-icons {
-    display: flex;
-    gap: 2rem;
+    display: flex; /* Activa flexbox */
+    gap: 2rem; /* Espacio de 2rem entre íconos */
 }
 
+/* Enlaces de íconos */
 .nav-icons a {
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    transition: color 0.3s; /* Transición suave del color */
 }
 
+/* Íconos al pasar el mouse */
 .nav-icons a:hover {
-    color: #B88E2F;
+    color: #B88E2F; /* Cambia a color dorado */
 }
 
+/* Estilos para íconos de Material Symbols */
 .material-symbols-outlined {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem */
 }
 
-/* Main */
+/* ========================================
+   MAIN - CONTENEDOR PRINCIPAL
+   ======================================== */
+
+/* Contenedor principal del contenido */
 .main {
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 1440px; /* Ancho máximo de 1440px */
+    margin: 0 auto; /* Centra horizontalmente */
 }
 
-/* Hero Section */
+/* ========================================
+   HERO SECTION - SECCIÓN PRINCIPAL
+   ======================================== */
+
+/* Sección hero con imagen de fondo */
 .hero {
-    position: relative;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 2rem;
+    position: relative; /* Contexto de posicionamiento para elementos absolutos */
+    min-height: 600px; /* Altura mínima de 600px */
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: flex-end; /* Alinea contenido a la derecha */
+    padding: 2rem; /* Relleno de 2rem en todos los lados */
 }
 
+/* Primer div hijo del hero (contenedor de imagen de fondo) */
 .hero > div:first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Posicionado en la parte superior */
+    left: 0; /* Posicionado a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    z-index: -1; /* Detrás del contenido (índice negativo) */
 }
 
+/* Imagen dentro del contenedor de fondo */
 .hero > div:first-child img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Recorta imagen para cubrir área sin distorsión */
 }
 
+/* Contenedor de contenido del hero */
 .container-hero {
-    background: #FFF3E3;
-    padding: 3rem 2.5rem;
-    max-width: 600px;
-    border-radius: 8px;
+    background: #FFF3E3; /* Fondo beige claro */
+    padding: 3rem 2.5rem; /* Relleno: 3rem arriba/abajo, 2.5rem laterales */
+    max-width: 600px; /* Ancho máximo de 600px */
+    border-radius: 8px; /* Esquinas redondeadas de 8px */
 }
 
+/* Subtítulo h2 del hero */
 .container-hero h2 {
-    color: #333;
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+    color: #333; /* Color gris oscuro */
+    font-weight: 600; /* Grosor semibold */
+    font-size: 1rem; /* Tamaño de fuente de 1rem (16px) */
+    letter-spacing: 2px; /* Espaciado entre letras de 2px */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Título principal h1 del hero */
 .container-hero h1 {
-    color: #B88E2F;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    color: #B88E2F; /* Color dorado */
+    font-size: 3rem; /* Tamaño de fuente grande de 3rem (48px) */
+    font-weight: 700; /* Grosor bold (negrita) */
+    line-height: 1.2; /* Altura de línea compacta */
+    margin-bottom: 1rem; /* Margen inferior de 1rem */
 }
 
+/* Párrafo del hero */
 .container-hero p {
-    color: #333;
-    margin-bottom: 2rem;
-    font-size: 1.125rem;
+    color: #333; /* Color gris oscuro */
+    margin-bottom: 2rem; /* Margen inferior de 2rem */
+    font-size: 1.125rem; /* Tamaño de fuente de 1.125rem (18px) */
 }
 
+/* Botón del hero */
 .container-hero button {
-    background: #B88E2F;
-    color: #fff;
-    padding: 1.25rem 4rem;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: background 0.3s;
+    background: #B88E2F; /* Fondo dorado */
+    color: #fff; /* Texto blanco */
+    padding: 1.25rem 4rem; /* Relleno: 1.25rem arriba/abajo, 4rem laterales */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    font-weight: 700; /* Grosor bold */
+    letter-spacing: 1px; /* Espaciado entre letras de 1px */
+    transition: background 0.3s; /* Transición suave del fondo */
 }
 
+/* Botón del hero al pasar el mouse */
 .container-hero button:hover {
-    background: #9c7829;
+    background: #9c7829; /* Fondo dorado más oscuro */
 }
 
-/* Browse Range Section */
+/* ========================================
+   BROWSE RANGE SECTION - CATEGORÍAS
+   ======================================== */
+
+/* Sección de categorías */
 .browse-range {
-    padding: 4rem 2rem;
-    text-align: center;
+    padding: 4rem 2rem; /* Relleno: 4rem arriba/abajo, 2rem laterales */
+    text-align: center; /* Centra el texto */
 }
 
+/* Encabezado de la sección browse range */
 .header-browse-range h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0.5rem;
+    font-size: 2rem; /* Tamaño de fuente de 2rem (32px) */
+    font-weight: 700; /* Grosor bold */
+    color: #333; /* Color gris oscuro */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Párrafo del encabezado */
 .header-browse-range p {
-    color: #666;
-    margin-bottom: 3rem;
+    color: #666; /* Color gris medio */
+    margin-bottom: 3rem; /* Margen inferior de 3rem */
 }
 
+/* Grid de categorías */
 .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid; /* Activa grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 2rem; /* Espacio de 2rem entre celdas */
+    max-width: 1200px; /* Ancho máximo de 1200px */
+    margin: 0 auto; /* Centra horizontalmente */
 }
 
+/* Imagen de la tarjeta de categoría */
 .category-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+    width: 100%; /* Ancho completo del contenedor */
+    border-radius: 8px; /* Esquinas redondeadas de 8px */
+    margin-bottom: 1.5rem; /* Margen inferior de 1.5rem */
 }
 
+/* Título h3 de la tarjeta de categoría */
 .category-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem (24px) */
+    font-weight: 600; /* Grosor semibold */
+    color: #333; /* Color gris oscuro */
 }
 
-/* Our Products Section */
+/* ========================================
+   OUR PRODUCTS SECTION - PRODUCTOS
+   ======================================== */
+
+/* Sección de productos */
 .our-products {
-    padding: 4rem 2rem;
-    background: #F9F9F9;
-    text-align: center;
+    padding: 4rem 2rem; /* Relleno: 4rem arriba/abajo, 2rem laterales */
+    background: #F9F9F9; /* Fondo gris muy claro */
+    text-align: center; /* Centra el texto */
 }
 
+/* Encabezado de la sección de productos */
 .header-our-products h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem; /* Tamaño de fuente de 2.5rem (40px) */
+    font-weight: 700; /* Grosor bold */
+    color: #333; /* Color gris oscuro */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Párrafo del encabezado de productos */
 .header-our-products p {
-    color: #666;
-    margin-bottom: 3rem;
+    color: #666; /* Color gris medio */
+    margin-bottom: 3rem; /* Margen inferior de 3rem */
 }
 
+/* Grid de productos */
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto 2rem;
+    display: grid; /* Activa grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 2rem; /* Espacio de 2rem entre celdas */
+    max-width: 1400px; /* Ancho máximo de 1400px */
+    margin: 0 auto 2rem; /* Centra horizontalmente, margen inferior de 2rem */
 }
 
+/* Tarjeta de producto */
 .product-card {
-    background: #F4F5F7;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s;
+    background: #F4F5F7; /* Fondo gris claro */
+    border-radius: 8px; /* Esquinas redondeadas de 8px */
+    overflow: hidden; /* Oculta contenido desbordado */
+    transition: transform 0.3s; /* Transición suave de transformación */
 }
 
+/* Tarjeta de producto al pasar el mouse */
 .product-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Desplaza 5px hacia arriba */
 }
 
+/* Contenedor de imagen del producto */
 .product-image {
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Contexto de posicionamiento para hijos absolutos */
+    overflow: hidden; /* Oculta contenido desbordado */
 }
 
+/* Imagen del producto */
 .product-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Alto fijo de 300px */
+    object-fit: cover; /* Recorta imagen para cubrir área sin distorsión */
 }
 
+/* Badge de descuento/nuevo (ícono material) */
 .product-image .material-symbols-outlined {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #E97171;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 1rem; /* 1rem desde la parte superior */
+    right: 1rem; /* 1rem desde la derecha */
+    background: #E97171; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 0.5rem 1rem; /* Relleno: 0.5rem arriba/abajo, 1rem laterales */
+    border-radius: 50px; /* Esquinas muy redondeadas (forma de píldora) */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    font-weight: 600; /* Grosor semibold */
 }
 
+/* Badge verde para el cuarto producto */
 .product-card:nth-child(4) .material-symbols-outlined {
-    background: #2EC1AC;
+    background: #2EC1AC; /* Fondo verde azulado */
 }
 
+/* Overlay que aparece sobre la imagen del producto */
 .product-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(58, 58, 58, 0.72);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    opacity: 0;
-    transition: opacity 0.3s;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Posicionado en la parte superior */
+    left: 0; /* Posicionado a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background: rgba(58, 58, 58, 0.72); /* Fondo gris oscuro semi-transparente */
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Dirección vertical */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: 1.5rem; /* Espacio de 1.5rem entre elementos */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s; /* Transición suave de opacidad */
 }
 
+/* Overlay visible al pasar el mouse sobre la tarjeta */
 .product-card:hover .product-overlay {
-    opacity: 1;
+    opacity: 1; /* Totalmente visible */
 }
 
+/* Botón de añadir al carrito */
 .btn-add-cart {
-    background: white;
-    color: #B88E2F;
-    padding: 0.75rem 3rem;
-    font-weight: 600;
-    font-size: 1rem;
+    background: white; /* Fondo blanco */
+    color: #B88E2F; /* Texto dorado */
+    padding: 0.75rem 3rem; /* Relleno: 0.75rem arriba/abajo, 3rem laterales */
+    font-weight: 600; /* Grosor semibold */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
 }
 
+/* Contenedor de acciones del producto (share, compare, like) */
 .product-actions {
-    display: flex;
-    gap: 1rem;
+    display: flex; /* Activa flexbox */
+    gap: 1rem; /* Espacio de 1rem entre botones */
 }
 
+/* Botones de acciones del producto */
 .product-actions button {
-    background: transparent;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.875rem;
-    font-weight: 600;
+    background: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    gap: 0.25rem; /* Espacio pequeño entre ícono y texto */
+    font-size: 0.875rem; /* Tamaño de fuente pequeño (14px) */
+    font-weight: 600; /* Grosor semibold */
 }
 
+/* Información del producto (título, descripción, precio) */
 .product-info {
-    padding: 1.5rem;
-    text-align: left;
+    padding: 1.5rem; /* Relleno de 1.5rem en todos los lados */
+    text-align: left; /* Alinea texto a la izquierda */
 }
 
+/* Título h3 del producto */
 .product-info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #3A3A3A;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem (24px) */
+    font-weight: 600; /* Grosor semibold */
+    color: #3A3A3A; /* Color gris oscuro */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Descripción del producto */
 .product-description {
-    color: #898989;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    color: #898989; /* Color gris medio */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Contenedor de precios */
 .product-price {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    font-weight: 600;
+    display: flex; /* Activa flexbox */
+    gap: 1rem; /* Espacio de 1rem entre precios */
+    align-items: center; /* Centra verticalmente */
+    font-weight: 600; /* Grosor semibold */
 }
 
+/* Precio actual */
 .current-price {
-    color: #3A3A3A;
-    font-size: 1.25rem;
+    color: #3A3A3A; /* Color gris oscuro */
+    font-size: 1.25rem; /* Tamaño de fuente de 1.25rem (20px) */
 }
 
+/* Precio original (tachado) */
 .original-price {
-    color: #B0B0B0;
-    text-decoration: line-through;
-    font-size: 1rem;
+    color: #B0B0B0; /* Color gris claro */
+    text-decoration: line-through; /* Texto tachado */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
 }
 
+/* Botón "Show More" */
 .btn-show-more {
-    background: transparent;
-    color: #B88E2F;
-    border: 2px solid #B88E2F;
-    padding: 0.75rem 4rem;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.3s;
+    background: transparent; /* Fondo transparente */
+    color: #B88E2F; /* Texto dorado */
+    border: 2px solid #B88E2F; /* Borde sólido dorado de 2px */
+    padding: 0.75rem 4rem; /* Relleno: 0.75rem arriba/abajo, 4rem laterales */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    font-weight: 600; /* Grosor semibold */
+    transition: all 0.3s; /* Transición suave de todas las propiedades */
 }
 
+/* Botón "Show More" al pasar el mouse */
 .btn-show-more:hover {
-    background: #B88E2F;
-    color: white;
+    background: #B88E2F; /* Fondo dorado */
+    color: white; /* Texto blanco */
 }
 
+/* ========================================
+   ROOMS INSPIRATION SECTION - SLIDER
+   ======================================== */
 
-
-
-/* Rooms Inspiration Section */
+/* Sección de inspiración de habitaciones */
 .rooms-inspiration {
-    padding: 4rem 2rem;
-    background: #FCF8F3;
-    overflow: hidden;
+    padding: 4rem 2rem; /* Relleno: 4rem arriba/abajo, 2rem laterales */
+    background: #FCF8F3; /* Fondo beige muy claro */
+    overflow: hidden; /* Oculta contenido desbordado */
 }
 
+/* Contenedor de inspiración */
 .inspiration-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
+    max-width: 1400px; /* Ancho máximo de 1400px */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    gap: 2.5rem; /* Espacio de 2.5rem entre elementos */
 }
 
+/* Contenido de texto de inspiración */
 .inspiration-content {
-    flex: 0 0 35%;
-    max-width: 420px;
+    flex: 0 0 35%; /* No crece, no se encoge, base del 35% */
+    max-width: 420px; /* Ancho máximo de 420px */
 }
 
+/* Título h2 de inspiración */
 .inspiration-content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #3A3A3A;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem; /* Tamaño de fuente de 2.5rem (40px) */
+    font-weight: 700; /* Grosor bold */
+    color: #3A3A3A; /* Color gris oscuro */
+    line-height: 1.2; /* Altura de línea compacta */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Párrafo de inspiración */
 .inspiration-content p {
-    color: #616161;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
+    color: #616161; /* Color gris medio */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    line-height: 1.6; /* Altura de línea */
+    margin-bottom: 2.5rem; /* Margen inferior de 2.5rem */
 }
 
+/* Botón "Explore More" */
 .btn-explore {
-    background: #B88E2F;
-    color: white;
-    padding: 0.875rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: background 0.3s;
+    background: #B88E2F; /* Fondo dorado */
+    color: white; /* Texto blanco */
+    padding: 0.875rem 2.5rem; /* Relleno: 0.875rem arriba/abajo, 2.5rem laterales */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    font-weight: 600; /* Grosor semibold */
+    transition: background 0.3s; /* Transición suave del fondo */
 }
 
+/* Botón "Explore More" al pasar el mouse */
 .btn-explore:hover {
-    background: #9c7829;
+    background: #9c7829; /* Fondo dorado más oscuro */
 }
 
-/* Slider */
+/* ========================================
+   SLIDER DE INSPIRACIÓN
+   ======================================== */
+
+/* Contenedor del slider */
 .inspiration-slider {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
+    flex: 1; /* Ocupa el espacio restante disponible */
+    position: relative; /* Contexto de posicionamiento para elementos absolutos */
+    overflow: hidden; /* Oculta contenido desbordado */
 }
 
-/* Ocultar radio buttons */
+/* Oculta los radio buttons que controlan el slider */
 .inspiration-slider input[type="radio"] {
-    display: none;
+    display: none; /* Oculta completamente */
 }
 
+/* Wrapper que contiene todos los slides */
 .slider-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%;
+    display: flex; /* Activa flexbox (slides en fila) */
+    transition: transform 0.5s ease-in-out; /* Transición suave de transformación */
+    width: 300%; /* Ancho del 300% (3 slides) */
 }
 
+/* Slide individual */
 .slide {
-    min-width: 33.333%;
-    position: relative;
-    padding-right: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 33.333%; /* Ancho mínimo de 33.333% (1/3 del wrapper) */
+    position: relative; /* Contexto de posicionamiento para elementos absolutos */
+    padding-right: 1rem; /* Relleno derecho de 1rem */
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
+/* Imagen del slide */
 .slide img {
-    width: 30rem;
-    height: 30rem;
-    object-fit: cover;
-    border-radius: 4px;
+    width: 30rem; /* Ancho de 30rem (480px) */
+    height: 30rem; /* Alto de 30rem (480px) */
+    object-fit: cover; /* Recorta imagen para cubrir área sin distorsión */
+    border-radius: 4px; /* Esquinas redondeadas de 4px */
 }
 
+/* Información del slide (overlay inferior) */
 .slide-info {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;  /* Centrar horizontalmente */
-    transform: translateX(-90%);  /* Ajuste para centrado perfecto */
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(4px);
-    padding: 2rem;
-    border-radius: 4px;
-    max-width: 220px;
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 2rem; /* 2rem desde la parte inferior */
+    left: 50%; /* 50% desde la izquierda */
+    transform: translateX(-90%); /* Desplaza -90% de su ancho para ajustar posición */
+    background: rgba(255, 255, 255, 0.72); /* Fondo blanco semi-transparente */
+    backdrop-filter: blur(4px); /* Efecto de desenfoque del fondo */
+    padding: 2rem; /* Relleno de 2rem en todos los lados */
+    border-radius: 4px; /* Esquinas redondeadas de 4px */
+    max-width: 220px; /* Ancho máximo de 220px */
 }
 
+/* Número del slide */
 .slide-number {
-    color: #616161;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    color: #616161; /* Color gris medio */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    font-weight: 500; /* Grosor medium */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem */
 }
 
+/* Título h3 del slide */
 .slide-info h3 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #3A3A3A;
-    margin: 0;
+    font-size: 1.75rem; /* Tamaño de fuente de 1.75rem (28px) */
+    font-weight: 600; /* Grosor semibold */
+    color: #3A3A3A; /* Color gris oscuro */
+    margin: 0; /* Sin margen */
 }
 
+/* Botón de flecha del slide */
 .btn-slide-arrow {
-    position: absolute;
-    bottom: 2rem;
-    left: 10%;  /* Centrado respecto al contenedor */
-    margin-left: 130px;  /* Ajusta según el ancho de .slide-info */
-    background: #B88E2F;
-    color: white;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    transition: background 0.3s;
-    cursor: pointer;
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 2rem; /* 2rem desde la parte inferior */
+    left: 10%; /* 10% desde la izquierda */
+    margin-left: 130px; /* Margen izquierdo adicional de 130px */
+    background: #B88E2F; /* Fondo dorado */
+    color: white; /* Texto blanco */
+    width: 48px; /* Ancho de 48px */
+    height: 48px; /* Alto de 48px */
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    border-radius: 4px; /* Esquinas redondeadas de 4px */
+    transition: background 0.3s; /* Transición suave del fondo */
+    cursor: pointer; /* Cursor de mano */
 }
 
-
+/* Botón de flecha al pasar el mouse */
 .btn-slide-arrow:hover {
-    background: #9c7829;
+    background: #9c7829; /* Fondo dorado más oscuro */
 }
 
+/* Ícono dentro del botón de flecha */
 .btn-slide-arrow .material-symbols-outlined {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem */
 }
 
-/* Controlar el slider con CSS */
+/* ========================================
+   CONTROLES DEL SLIDER CON CSS
+   ======================================== */
+
+/* Slide 1 seleccionado - muestra primer slide */
 #slide1:checked ~ .slider-wrapper {
-    transform: translateX(0%);
+    transform: translateX(0%); /* Sin desplazamiento */
 }
 
+/* Slide 2 seleccionado - muestra segundo slide */
 #slide2:checked ~ .slider-wrapper {
-    transform: translateX(-33.333%);
+    transform: translateX(-33.333%); /* Desplaza -33.333% (un slide) */
 }
 
+/* Slide 3 seleccionado - muestra tercer slide */
 #slide3:checked ~ .slider-wrapper {
-    transform: translateX(-66.666%);
+    transform: translateX(-66.666%); /* Desplaza -66.666% (dos slides) */
 }
 
-/* Slider Controls */
+/* Contenedor de controles del slider */
 .slider-controls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Posicionado en la parte superior */
+    left: 0; /* Posicionado a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    pointer-events: none; /* No responde a eventos del mouse (excepto hijos) */
 }
 
+/* Botones de navegación del slider (prev/next) */
 .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    color: #B88E2F;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 10;
-    pointer-events: all;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* 50% desde arriba */
+    transform: translateY(-50%); /* Centra verticalmente */
+    background: white; /* Fondo blanco */
+    color: #B88E2F; /* Texto dorado */
+    width: 48px; /* Ancho de 48px */
+    height: 48px; /* Alto de 48px */
+    border-radius: 50%; /* Forma circular */
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s; /* Transición suave de todas las propiedades */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+    z-index: 10; /* Por encima de otros elementos */
+    pointer-events: all; /* Responde a eventos del mouse */
 }
 
+/* Botón del slider al pasar el mouse */
 .slider-btn:hover {
-    background: #B88E2F;
-    color: white;
+    background: #B88E2F; /* Fondo dorado */
+    color: white; /* Texto blanco */
 }
 
+/* Botón "anterior" */
 .slider-btn.prev {
-    left: 1rem;
+    left: 1rem; /* 1rem desde la izquierda */
 }
 
+/* Botón "siguiente" */
 .slider-btn.next {
-    right: 1rem;
+    right: 1rem; /* 1rem desde la derecha */
 }
 
+/* Ícono dentro de los botones del slider */
 .slider-btn .material-symbols-outlined {
-    font-size: 1.75rem;
+    font-size: 1.75rem; /* Tamaño de fuente de 1.75rem */
 }
 
-/* Dots Navigation */
+/* ========================================
+   NAVEGACIÓN POR PUNTOS (DOTS)
+   ======================================== */
+
+/* Contenedor de puntos indicadores */
 .slider-dots {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1rem;
-    z-index: 10;
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 1.5rem; /* 1.5rem desde la parte inferior */
+    left: 50%; /* 50% desde la izquierda */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    display: flex; /* Activa flexbox */
+    gap: 1rem; /* Espacio de 1rem entre puntos */
+    z-index: 10; /* Por encima de otros elementos */
 }
 
+/* Punto individual */
 .dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #D8D8D8;
-    border: 1px solid #D8D8D8;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: block;
+    width: 11px; /* Ancho de 11px */
+    height: 11px; /* Alto de 11px */
+    border-radius: 50%; /* Forma circular */
+    background: #D8D8D8; /* Fondo gris claro */
+    border: 1px solid #D8D8D8; /* Borde gris claro */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s; /* Transición suave de todas las propiedades */
+    display: block; /* Display en bloque */
 }
 
+/* Punto al pasar el mouse */
 .dot:hover {
-    background: #B88E2F;
-    border-color: #B88E2F;
+    background: #B88E2F; /* Fondo dorado */
+    border-color: #B88E2F; /* Borde dorado */
 }
 
-/* Dots activos según el slide */
+/* Punto activo para slide 1 */
 #slide1:checked ~ .slider-dots label:nth-child(1),
+/* Punto activo para slide 2 */
 #slide2:checked ~ .slider-dots label:nth-child(2),
+/* Punto activo para slide 3 */
 #slide3:checked ~ .slider-dots label:nth-child(3) {
-    background: #B88E2F;
-    border-color: #B88E2F;
-    width: 27px;
-    border-radius: 10px;
+    background: #B88E2F; /* Fondo dorado */
+    border-color: #B88E2F; /* Borde dorado */
+    width: 27px; /* Ancho extendido de 27px */
+    border-radius: 10px; /* Forma de píldora */
 }
 
+/* ========================================
+   FOOTER - PIE DE PÁGINA
+   ======================================== */
 
-
-
-
-
-
-
-
-
-
-/* Footer */
+/* Contenedor del footer */
 .footer {
-    background: #fff;
-    padding: 3rem 2rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    gap: 3rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    border-top: 1px solid #D9D9D9;
+    background: #fff; /* Fondo blanco */
+    padding: 3rem 2rem; /* Relleno: 3rem arriba/abajo, 2rem laterales */
+    display: grid; /* Activa grid layout */
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr; /* 5 columnas con diferentes tamaños */
+    gap: 3rem; /* Espacio de 3rem entre columnas */
+    max-width: 1440px; /* Ancho máximo de 1440px */
+    margin: 0 auto; /* Centra horizontalmente */
+    border-top: 1px solid #D9D9D9; /* Borde superior gris claro */
 }
 
+/* Título h1 del nombre de la página en footer */
 .name-page h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000;
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem */
+    font-weight: 700; /* Grosor bold */
+    color: #000; /* Color negro */
 }
 
+/* Listas del footer */
 .footer ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Dirección vertical */
+    gap: 1rem; /* Espacio de 1rem entre elementos */
 }
 
+/* Primer elemento de cada lista (título de sección) */
 .footer ul li:first-child {
-    font-weight: 600;
-    color: #9F9F9F;
-    margin-bottom: 1rem;
+    font-weight: 600; /* Grosor semibold */
+    color: #9F9F9F; /* Color gris medio */
+    margin-bottom: 1rem; /* Margen inferior de 1rem */
 }
 
+/* Enlaces del footer */
 .footer ul li a {
-    color: #000;
-    transition: color 0.3s;
+    color: #000; /* Color negro */
+    transition: color 0.3s; /* Transición suave del color */
 }
 
+/* Enlaces del footer al pasar el mouse */
 .footer ul li a:hover {
-    color: #B88E2F;
+    color: #B88E2F; /* Color dorado */
 }
 
+/* Opciones sociales del footer */
 .social-opcion {
-    display: flex;
-    gap: 1rem;
+    display: flex; /* Activa flexbox */
+    gap: 1rem; /* Espacio de 1rem entre elementos */
 }
 
+/* Botones del newsletter */
 .button-newsletter {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem; /* Relleno: 0.75rem arriba/abajo, 1.5rem laterales */
+    font-size: 0.875rem; /* Tamaño de fuente pequeño (14px) */
 }
 
+/* Primer botón del newsletter (input de email) */
 .button-newsletter:first-child {
-    background: transparent;
-    border: 1px solid #9F9F9F;
-    color: #9F9F9F;
-    flex: 1;
+    background: transparent; /* Fondo transparente */
+    border: 1px solid #9F9F9F; /* Borde gris */
+    color: #9F9F9F; /* Texto gris */
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
+/* Último botón del newsletter (botón de envío) */
 .button-newsletter:last-child {
-    background: #B88E2F;
-    color: white;
-    font-weight: 600;
-    transition: background 0.3s;
+    background: #B88E2F; /* Fondo dorado */
+    color: white; /* Texto blanco */
+    font-weight: 600; /* Grosor semibold */
+    transition: background 0.3s; /* Transición suave del fondo */
 }
 
+/* Botón de envío del newsletter al pasar el mouse */
 .button-newsletter:last-child:hover {
-    background: #9c7829;
+    background: #9c7829; /* Fondo dorado más oscuro */
 }
-/* Responsive */
+
+/* ========================================
+   DISEÑO RESPONSIVO
+   ======================================== */
+
+/* Tablets y pantallas medianas (1024px o menos) */
 @media (max-width: 1024px) {
+    /* Contenedor de inspiración en columna */
     .inspiration-container {
-        flex-direction: column;
+        flex-direction: column; /* Apila elementos verticalmente */
     }
 
+    /* Contenido de inspiración a ancho completo */
     .inspiration-content {
-        flex: none;
-        max-width: 100%;
-        text-align: center;
+        flex: none; /* Elimina propiedades flex */
+        max-width: 100%; /* Ancho máximo del 100% */
+        text-align: center; /* Centra el texto */
     }
 
+    /* Reduce altura de imagen del slide */
     .slide img {
-        height: 400px;
+        height: 400px; /* Alto de 400px */
     }
 }
 
+/* Móviles (768px o menos) */
 @media (max-width: 768px) {
+    /* Reduce tamaño del título de inspiración */
     .inspiration-content h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Tamaño de fuente de 2rem */
     }
 
+    /* Reduce altura de imagen del slide */
     .slide img {
-        height: 300px;
+        height: 300px; /* Alto de 300px */
     }
 
+    /* Reduce tamaño de botones del slider */
     .slider-btn {
-        width: 40px;
-        height: 40px;
+        width: 40px; /* Ancho de 40px */
+        height: 40px; /* Alto de 40px */
     }
 }
